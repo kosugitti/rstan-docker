@@ -1,4 +1,4 @@
-FROM asachet/rocker-stan:latest
+FROM asachet/rocker-ml:latest
 LABEL maintainer="kosugitti@gmail.com"  \
 org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
 
@@ -7,12 +7,6 @@ org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
 RUN apt-get update \
 && apt-get install -y --no-install-recommends \
 clang
-
-sudo apt-get install tcl8.5-dev
-
-# install libjpeg & V8 for "psycho"
-RUN apt-get install -y libjpeg-dev
-RUN apt-get install -y libv8-dev
 
 # install_stan.R creates a makevars file and installs rstan from source
 # following the instructions at https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux

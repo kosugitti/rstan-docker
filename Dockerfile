@@ -1,4 +1,4 @@
-FROM asachet/rocker-ml:latest
+FROM asachet/rocker-stan:latest
 LABEL maintainer="kosugitti@gmail.com"  \
 org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
 
@@ -23,4 +23,7 @@ projpred \
 rstanarm \
 rstantools \ 
 shinystan \
-tidybayes
+tidybayes \
+summarytools \
+bridgesampling \
+

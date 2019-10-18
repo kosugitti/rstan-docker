@@ -48,4 +48,4 @@ tidybayes \
 tidyverse \
 doRNG
 
-RUN installGithub.r hoxo-m/pforeach -deps TRUE \
+RUN installGithub.r hoxo-m/pforeach --deps TRUE \

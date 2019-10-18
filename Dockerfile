@@ -45,7 +45,7 @@ rstantools \
 shinystan \
 summarytools \
 tidybayes \
-tidyverse 
-
+tidyverse \
+doRNG
 
 RUN installGithub.r hoxo-m/pforeach -deps TRUE \

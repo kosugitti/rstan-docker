@@ -10,17 +10,23 @@ clang
 
 # Install JAGS and other linux packages
 RUN apt-get update && apt-get install -y \
+	cargo \
     jags \
+	gdal-bin \
 	libudunits2-dev \
     libgsl0-dev \
 	libprotobuf-dev \
-	cargo \
-    tcl8.6-dev \
-    tk8.6-dev\
-    openmpi-bin\
     libglpk-dev \
     libcgal-dev \
     libglu1-mesa-dev \
+	libgdal-dev \
+	libproj-dev \
+	libgeos-dev \
+    openmpi-bin \
+	proj-data \
+	proj-bin \
+    tcl8.6-dev \
+    tk8.6-dev \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 

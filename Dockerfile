@@ -33,25 +33,31 @@ RUN apt-get update && apt-get install -y \
 
 # install_stan.R creates a makevars file and installs rstan from source
 # following the instructions at https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux
+
 COPY install_stan.R install_stan.R
 RUN ["r", "install_stan.R"]
 
 # Installing the rest 
+
 RUN install2.r --skipinstalled --error --deps TRUE --ncpus -1 \
-bayesplot \
-bridgesampling \
-brms \
-coda \
-GPArotation \
-loo \
-projpred \
-psych \
-rstanarm \
-rstantools \ 
-shinystan \
-summarytools \
-tidybayes \
-tidyverse \
-doRNG
+	bayesplot \
+	bridgesampling \
+	brms \
+	coda \
+	GPArotation \
+	loo \
+	projpred \
+	psych \
+	rstanarm \
+	rstantools \ 
+	shinystan \
+	summarytools \
+	tidybayes \
+	tidyverse \
+	doRNG \
+	lavaan \
+	blavaan \
+	formattable
+
 
 RUN installGithub.r hoxo-m/pforeach --deps TRUE \

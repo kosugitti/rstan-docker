@@ -39,7 +39,6 @@ RUN ["r", "install_stan.R"]
 
 # Installing the rest 
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-	BiocManager \
 	bayesplot \
 	bridgesampling \
 	brms \
@@ -54,6 +53,7 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	summarytools \
 	tidybayes \
 	tidyverse \
+	modeest \
 	doRNG \
 	lavaan \
 	blavaan \

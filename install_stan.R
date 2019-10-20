@@ -15,5 +15,8 @@ cat("\nCXX14FLAGS=-O3 -march=native -mtune=native -fPIC",
 )
 
 ## Installing rstan
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("genefilter")
 
 install.packages("rstan", type = "source")

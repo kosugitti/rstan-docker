@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
 	proj-bin \
 	tcl8.6-dev \
 	tk8.6-dev \
+	libhiredis-dev \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
@@ -38,23 +39,31 @@ COPY install_stan.R install_stan.R
 RUN ["r", "install_stan.R"]
 
 # Installing the rest 
+### To use cache in local compile, devide install2.r code
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	bayesplot \
 	bridgesampling \
 	brms \
-	coda \
+	coda 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	GPArotation \
 	loo \
 	projpred \
-	psych \
+	psych 
+	
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	rstanarm \
 	rstantools \ 
 	shinystan \
-	summarytools \
+	summarytools 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	tidybayes \
 	tidyverse \
-	modeest \
-	doRNG \
+	doRNG 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	lavaan \
 	blavaan \
 	formattable

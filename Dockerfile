@@ -54,7 +54,9 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	loo \
 	lavaan \
 	projpred \
-	psych 
+	graph \
+	Rgraphviz \
+	psych
 	
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	rstanarm \

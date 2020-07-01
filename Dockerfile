@@ -51,9 +51,13 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	formattable \
 	GGally \
-	GPArotation \
+	GPArotation 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	loo \
-	lavaan \
+	lavaan 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	projpred \
 	psych
 	

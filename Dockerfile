@@ -44,11 +44,15 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	bayesplot \
 	bridgesampling \
 	brms \
+	Cairo \
 	coda 
 
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
+	formattable \
+	GGally \
 	GPArotation \
 	loo \
+	lavaan \
 	projpred \
 	psych 
 	
@@ -69,3 +73,4 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	formattable
 
 RUN installGithub.r hoxo-m/pforeach --deps TRUE
+

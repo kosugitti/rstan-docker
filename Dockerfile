@@ -41,6 +41,7 @@ RUN ["r", "install_stan.R"]
 # Installing the rest 
 ### To use cache in local compile, devide install2.r code
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
+	BiocManager \
 	bayesplot \
 	bridgesampling \
 	brms \
@@ -54,8 +55,6 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	loo \
 	lavaan \
 	projpred \
-	graph \
-	Rgraphviz \
 	psych
 	
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \

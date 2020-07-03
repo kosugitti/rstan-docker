@@ -58,7 +58,7 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	lavaan 
 
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-	projpred \
+#	projpred \
 	psych
 	
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \

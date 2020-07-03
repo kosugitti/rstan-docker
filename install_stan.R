@@ -20,3 +20,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("genefilter")
 
 install.packages("rstan", type = "source")
+
+install.packages("BiocManager")
+BiocManager::install("graph")
+BiocManager::install("Rgraphviz")

@@ -25,4 +25,4 @@ install.packages("BiocManager")
 BiocManager::install("graph")
 BiocManager::install("Rgraphviz")
 
-install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos"))
+install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))

@@ -70,6 +70,7 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	tidybayes \
 	tidyverse \
+	doRedis \
 	doRNG 
 
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \

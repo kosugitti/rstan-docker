@@ -45,38 +45,34 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	bayesplot \
 	bridgesampling \
 	brms \
+	blavaan \
+	broom \
+	caret \
 	Cairo \
-	coda 
-
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
+	coda \
+	DMwR \
+	e1071 \
+	effectsize \
 	formattable \
+	ggmcmc \
+	ggExtra \
 	GGally \
-	GPArotation 
-
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
+	GPArotation \
+	gtsummary \
+	knitr \
 	loo \
-	lavaan 
-
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-#	projpred \
-	psych
-	
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
+	lavaan \
+	lme4 \
+	mlr \
+	psych \
+	randomForest \
 	rstanarm \
 	rstantools \ 
 	shinystan \
-	summarytools 
-
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-	tidybayes \
+	summarytools \
 	tidyverse \
-	doRedis \
-	doRNG 
+	tidybayes 
 
-RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-	lavaan \
-	blavaan \
-	formattable
-
-RUN installGithub.r hoxo-m/pforeach --deps TRUE
-
+# Install from github
+RUN installGithub.r ykunisato/senshuRmd 
+RUN installGithub.r ykunisato/jpaRmd

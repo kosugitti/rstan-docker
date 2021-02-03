@@ -26,3 +26,6 @@ BiocManager::install("graph")
 BiocManager::install("Rgraphviz")
 
 install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+
+install.packages(pkgs ="https://cran.r-project.org/src/contrib/Archive/CoxBoost/CoxBoost_1.4.tar.gz",
+, type="source", repos=NULL)

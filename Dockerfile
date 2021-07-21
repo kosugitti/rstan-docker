@@ -8,6 +8,19 @@ RUN apt-get update \
 && apt-get install -y --no-install-recommends \
 clang
 
+# Install ipaexfont
+RUN apt-get update
+RUN apt-get install -y fonts-ipaexfont
+
+# install libjpeg & V8 for "psycho"
+RUN apt-get install -y libjpeg-dev libv8-dev
+
+# install ImageMagick++ library for magick
+RUN apt-get install -y libmagick++-dev
+
+# install clang for Rstan
+RUN apt-get install -y clang make
+
 # Install JAGS and other linux packages
 RUN apt-get update && apt-get install -y \
 	cargo \

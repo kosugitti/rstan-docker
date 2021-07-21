@@ -1,4 +1,4 @@
-FROM asachet/rocker-ml:latest
+FROM rocker/verse:latest
 LABEL maintainer="kosugitti@gmail.com"  \
 org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
 

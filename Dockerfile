@@ -50,6 +50,7 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	caret \
 	Cairo \
 	coda \
+	rrlda \
 	DMwR \
 	e1071 \
 	effectsize \

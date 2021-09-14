@@ -1,12 +1,12 @@
 FROM rocker/verse:latest
 LABEL maintainer="kosugitti@gmail.com"  \
-org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
+	org.label-schema.vcs-url="https://github.com/kosugitti/rstan-docker"
 
 # Using clang to compile Stan
 # Using the default g++ causes memory issues
 RUN apt-get update \
-&& apt-get install -y --no-install-recommends \
-clang
+	&& apt-get install -y --no-install-recommends \
+	clang
 
 # Install ipaexfont
 RUN apt-get update
@@ -41,8 +41,8 @@ RUN apt-get update && apt-get install -y \
 	tcl8.6-dev \
 	tk8.6-dev \
 	libhiredis-dev \
-&& apt-get clean \
-&& rm -rf /var/lib/apt/lists/*
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/*
 
 
 # install_stan.R creates a makevars file and installs rstan from source
@@ -54,7 +54,6 @@ RUN ["r", "install_stan.R"]
 # Installing the rest 
 ### To use cache in local compile, devide install2.r code
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
-	BiocManager \
 	bayesplot \
 	bridgesampling \
 	brms \
@@ -63,21 +62,20 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	caret \
 	Cairo \
 	coda \
-#	rrlda \
-#	DMwR \
+	colorBlindness \
 	e1071 \
 	effectsize \
+	extraDistr \
 	formattable \
 	ggmcmc \
-	ggExtra \
 	GGally \
 	GPArotation \
 	gtsummary \
 	knitr \
-	loo \
 	lavaan \
 	lme4 \
 	mlr \
+	mvoutlier \
 	psych \
 	randomForest \
 	rstanarm \

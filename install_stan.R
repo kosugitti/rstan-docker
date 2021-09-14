@@ -18,14 +18,21 @@ cat("\nCXX14FLAGS=-O3 -march=native -mtune=native -fPIC",
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("genefilter")
-
-install.packages("rstan", type = "source")
-
-install.packages("BiocManager")
 BiocManager::install("graph")
 BiocManager::install("Rgraphviz")
 
+install.packages("rstan", type = "source")
+
+
 install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 
-install.packages(pkgs ="https://cran.r-project.org/src/contrib/Archive/CoxBoost/CoxBoost_1.4.tar.gz",
-, type="source", repos=NULL)
+#install.packages(pkgs ="https://cran.r-project.org/src/contrib/Archive/CoxBoost/CoxBoost_1.4.tar.gz",
+# , type="source", repos=NULL)
+
+install.packages(c("pcaPP", "mvoutlier", "glasso", "matrixcalc"))
+
+url <- "https://cran.r-project.org/src/contrib/Archive/rrlda/rrlda_1.1.tar.gz"
+pkgFile <- "rrlda_1.1.tar.gz"
+download.file(url = url, destfile = pkgFile)
+install.packages(pkgs=pkgFile, type="source", repos=NULL)
+unlink(pkgFile)

@@ -62,7 +62,9 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	caret \
 	Cairo \
 	coda \
-	colorBlindness \
+	colorBlindness 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	e1071 \
 	effectsize \
 	extraDistr \
@@ -71,6 +73,9 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	GGally \
 	GPArotation \
 	gtsummary \
+	h2o
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	knitr \
 	lavaan \
 	lme4 \
@@ -78,8 +83,9 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	mvoutlier \
 	psych \
 	randomForest \
-	rstanarm \
-	rstantools \ 
+	rstantools 
+
+RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	shinystan \
 	summarytools \
 	tidyverse \

@@ -25,7 +25,7 @@ install.packages("rstan", type = "source")
 
 install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
 cmdstanr::install_cmdstan(cores=2, version="2.26.1")
-set_cmdstan_path("/home/rstudio/.cmdstanr/cmdstan-2.26.1")
+cmdstanr::set_cmdstan_path("/home/rstudio/.cmdstanr/cmdstan-2.26.1")
 
 install.packages("h2o", type="source")
 

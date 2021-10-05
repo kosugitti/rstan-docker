@@ -40,7 +40,6 @@ docker run -e PASSWORD=password -p 8787:8787 -v $(pwd):/home/rstudio -d --name n
 - mlr
 - psych
 - randomForest
-- rstanarm
 - rstantools
 - shinystan
 - summarytools
@@ -48,3 +47,5 @@ docker run -e PASSWORD=password -p 8787:8787 -v $(pwd):/home/rstudio -d --name n
 - tidybayes
 - senshuRmd
 - jpaRmd
+
+※エラーが出るので rstanarm パッケージは除外しています（2021/09/29 現在）

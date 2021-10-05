@@ -1,0 +1,6 @@
+0:styler:::style_active_file()
+1631599152444:url <- "https://cran.r-project.org/src/contrib/Archive/rrlda/rrlda_1.1.tar.gz"
+1631599152698:pkgFile <- "rrlda_1.1.tar.gz"
+1631599152703:download.file(url = url, destfile = pkgFile)
+1631599157271:install.packages(pkgs=pkgFile, type="source", repos=NULL)
+1631599186386:unlink(pkgFile)

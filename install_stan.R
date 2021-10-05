@@ -23,11 +23,10 @@ BiocManager::install("Rgraphviz")
 
 install.packages("rstan", type = "source")
 
-
 install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+cmdstanr::install_cmdstan(cores=2, version="2.26.1")
 
-#install.packages(pkgs ="https://cran.r-project.org/src/contrib/Archive/CoxBoost/CoxBoost_1.4.tar.gz",
-# , type="source", repos=NULL)
+install.packages("h2o", type="source")
 
 install.packages(c("pcaPP", "mvoutlier", "glasso", "matrixcalc"))
 

@@ -24,7 +24,7 @@ BiocManager::install("Rgraphviz")
 install.packages("rstan", type = "source")
 
 install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-cmdstanr::install_cmdstan(cores=2, version="2.26.1")
+cmdstanr::install_cmdstan(cores=2, version="2.28.0")
 
 install.packages("h2o", type="source")
 

@@ -67,6 +67,7 @@ RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 RUN install2.r --skipinstalled --error --d TRUE --ncpus -1 \
 	e1071 \
 	effectsize \
+	effsize \
 	extraDistr \
 	formattable \
 	ggmcmc \
